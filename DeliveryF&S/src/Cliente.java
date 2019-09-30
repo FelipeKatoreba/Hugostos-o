@@ -1,7 +1,18 @@
+import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+@Entity
 public class Cliente {
 
 	private String nome;
+	@Id
+	@Column(name = "id_clientes")
+	private Long id;
 	Long CPF;
 	private int telefone;
 	private String endereco;
@@ -30,4 +41,10 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
+
+	
+	
+
 }
+
+
