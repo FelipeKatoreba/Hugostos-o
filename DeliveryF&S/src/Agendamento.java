@@ -32,6 +32,9 @@ private Long id1;
 	@JoinColumn(name = "id_funcionario")
 	private Funcionário funcionario;
 	
+	@OneToMany(mappedBy = "agendamento")
+	private Set<Servico> servicos;
+	
 	
 	
 	
