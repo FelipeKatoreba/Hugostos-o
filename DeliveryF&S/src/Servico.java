@@ -38,7 +38,7 @@ public class Servico implements Identificavel{
 		this.forma_de_pagamento = forma_de_pagamento;
 	}
 	@ManyToOne
-	@JoinColumn(name = "id agendamento")
+	@JoinColumn(name = "id_agendamento")
 	private Agendamento agendamento;
 	@ManyToOne
 	@JoinColumn(name = "id_funcionario")
