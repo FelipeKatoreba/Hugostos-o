@@ -6,7 +6,15 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Comida {
+public class Comida implements Identificavel {
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	int tipo;
 	@Id

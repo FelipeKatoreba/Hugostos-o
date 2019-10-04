@@ -7,11 +7,28 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Cliente {
+public class Cliente implements Identificavel {
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(Long CPF) {
+		this.CPF = CPF;
+	}
 
 	private String nome;
-	@Id
 	@Column(name = "id_clientes")
+	@Id
+	
 	private Long id;
 	Long CPF;
 	private int telefone;
@@ -40,10 +57,6 @@ public class Cliente {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-
-
-	
-	
 
 }
 

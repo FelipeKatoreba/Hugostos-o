@@ -6,15 +6,23 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Funcionário {
+public class Funcionário implements Identificavel {
 	private int telefone;
 	private String email;
-	@Id
 	@Column(name = "id_funcionario")
+	@Id
+
 	private Long id;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	private String nome;
 
-	
 	public int getTelefone() {
 		return telefone;
 	}
@@ -38,10 +46,25 @@ public class Funcionário {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-@OneToMany(mappedBy = "funcionario")
-private Set<Agendamento> agendamentos;
 
-@OneToMany(mappedBy = "funcionario")
-private Set<Servico> servicos;
+	@OneToMany(mappedBy = "funcionario")
+	private Set<Agendamento> agendamentos;
+
+	@OneToMany(mappedBy = "funcionario")
+	private Set<Servico> servicos;
+	public void setEndereco(String endereco) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setId1(Long id2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setId11(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

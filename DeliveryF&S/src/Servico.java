@@ -5,13 +5,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Servico {
+public class Servico implements Identificavel{
 
 	private Integer valor;
 	private int forma_de_pagamento;
 	@Id
-	private Long id;
 	@Column(name = "id_servicos")
+	private Long id;
+	
 	
 	public Integer getValor() {
 		return valor;
@@ -23,6 +24,14 @@ public class Servico {
 
 	public int getForma_de_pagamento() {
 		return forma_de_pagamento;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public void setForma_de_pagamento(int forma_de_pagamento) {
@@ -37,4 +46,5 @@ public class Servico {
 	public Long getId(Long id) {
 		return this.id = id;
 	}
+
 }
